@@ -155,11 +155,10 @@
             </span>
           </div>
           <div class="form-submit-wrap">
-            <a
-              href="#"
+            <button
+              type="button"
               id="button"
               class="button"
-              onclick="document.getElementById('form').submit();"
               >Enviar un mensaje
               <div class="button__icons is-white">
                 <div class="icon-small w-embed">
@@ -183,9 +182,10 @@
                   </svg>
                 </div>
               </div>
-            </a>
+            </button>
           </div>
         </div>
+        <div id="form-message"></div>
       </div>
     </div>
     <div id="form__sucess"></div>
@@ -557,6 +557,27 @@
   .selected-option {
     color: black !important;
   }
+
+  .form-message {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: none;
+  }
+
+  .form-message.success {
+    display: block;
+    color: #166534;
+    background-color: #dcfce7;
+  }
+
+  .form-message.error {
+    display: block;
+    color: #991b1b;
+    background-color: #fee2e2;
+  }
 </style>
 
 <script
@@ -580,14 +601,20 @@
       const serviceID = "service_t2idvpt";
       const templateID = "template_b4pxi59";
 
+      const msg = document.getElementById("form-message");
+      msg.className = "form-message";
+
       emailjs.sendForm(serviceID, templateID, form).then(
         () => {
           btn.textContent = "Enviar mensaje";
-          alert("Mensaje enviado con éxito");
+          msg.textContent = "Mensaje enviado con éxito";
+          msg.classList.add("success");
+          form.reset();
         },
         (err) => {
           btn.textContent = "Enviar mensaje";
-          alert(JSON.stringify(err));
+          msg.textContent = "Error al enviar. Intenta de nuevo.";
+          msg.classList.add("error");
         },
       );
     });
