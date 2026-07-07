@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Gotham SSm A", sans-serif;
+  --color-custom-border: rgb(84, 129, 178);
+}

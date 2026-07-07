@@ -1,0 +1,49 @@
+---
+const { mostrarFormulario } = Astro.props;
+import Form from "./Form.astro";
+---
+
+<div class="relative
+flex
+items-center
+custom-container">
+  <slot name="info-contact" />
+  <div class="flex-none px-4">
+    <div class="contact-form">
+      {mostrarFormulario && <Form />}
+    </div>
+  </div>
+</div>
+
+<style>
+  .contact-form {
+    z-index: 3;
+    background-color: transparent;
+    background-image: url(/card-contact_laptop.webp);
+    opacity: 1;
+    transform-origin: 50% 0;
+    background-position:
+      0 0,
+      0 0;
+    background-repeat: no-repeat;
+    /* background-size: auto,100%; */
+    background-size: cover;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    padding: 5rem 6rem 2rem;
+    transition:
+      transform 0.6s,
+      opacity 0.4s;
+    position: relative;
+    transform: perspective(800px) rotate(0);
+  }
+
+  .container-contact {
+    z-index: 2;
+    width: 100%;
+    max-width: 104rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+</style>

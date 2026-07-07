@@ -1,0 +1,71 @@
+---
+import Section from "./Section.astro";
+import "../styles/nft.css";
+---
+
+<Section
+  title="Productos"
+  subtitle="Somos fabricantes de productos para el sector de telecomunicaciones e industrial"
+  color="white"
+  id="products">
+  <div slot="contain">
+    <div class="nft">
+      <div class="main">
+        <div class="tokenInfo">
+          <div class="duration">
+            <p>
+              Consulte nuestra tienda para conocer nuestras línea de productos
+              manufacturados con alto nivel de detalle. Contamos con herrajes
+              para suspensión de distintos tipos, soporte de bobinas, grapas,
+              placas para crucero, bobinas enrolladas, brazos de extensión,
+              cables y demás productos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div slot="footer" class="gap-x-6 flex mx-auto">
+    <a
+      class="border-[3px] border-gray-600 bg-gray-600 text-sm rounded font-medium text-white px-12 py-2 inline-block transition-colors hover:border-gray-500 hover:bg-gray-500"
+      href="#">
+      Catálogo</a
+    >
+    <a
+      class="bg-white text-sm rounded font-medium px-12 py-2 transition-colors hover:bg-black hover:text-white inline-flex justify-center items-center text-black"
+      href="#">
+      Tienda</a
+    >
+  </div>
+
+  <img
+    slot="background"
+    alt="Model X"
+    class="h-full w-full object-cover object-center"
+    src="products.avif"
+    id="bg-image-products"
+  />
+</Section>
+
+<script>
+  function isEdge() {
+    if (
+      navigator.userAgent.indexOf("Edge") > -1 ||
+      navigator.userAgent.indexOf("Edg") > -1
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let imageElement = document.querySelector(
+    "#bg-image-products"
+  ) as HTMLImageElement;
+
+  if (isEdge()) {
+    imageElement.src = "products.webp";
+  } else {
+    imageElement.src = "products.avif";
+  }
+</script>

@@ -1,0 +1,75 @@
+---
+import Section from "./Section.astro";
+import "../styles/nft.css";
+---
+<Section
+  title="Servicios"
+  subtitle="Nuestros ingenieros industriales pueden ayudarte desde el diseño hasta la ingenieria"
+  subtitleExtraClass=""
+  color="black"
+  id="service"
+>
+  <div slot="contain">
+    <div class="nft">
+      <div class="main">
+        <div class="tokenInfo">
+          <div class="duration">
+            <p>
+              Contamos con servicios de acabados e inyección de plástico<br />
+              ACABADOS: <br />•Galvanizado por inmersión en caliente
+              •Galvanizado electrolítico •Tropicalizado •Pintura electroestática
+              •Pintura de aceite <br />
+              INYECCIÓN: <br />•Maquila de piezas de plástico •De 100 a 2000 gr
+              de 112 a 455 T •Tampografía
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div slot="footer" class="gap-x-6 flex mx-auto">
+    <a
+      class="border-[3px] border-gray-600 bg-gray-600 text-sm rounded font-medium text-white px-12 py-2 inline-block transition-colors hover:border-gray-500 hover:bg-gray-500"
+      href="#"
+    >
+      Acabados metálicos</a
+    >
+    <a
+      class="bg-white text-sm rounded font-medium px-12 py-2 transition-colors hover:bg-black hover:text-white inline-flex justify-center items-center text-black"
+      href="#"
+    >
+      Inyección de plástico</a
+    >
+  </div>
+
+  <img
+    slot="background"
+    alt="Espacio metalurgico con máquinaria relacionada"
+    class="h-full w-full object-cover object-center"
+    src="service.avif"
+    id="bg-image-service"
+  />
+</Section>
+
+<script>
+  function isEdge() {
+    if (
+      navigator.userAgent.indexOf("Edge") > -1 ||
+      navigator.userAgent.indexOf("Edg") > -1
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let imageElement = document.querySelector(
+    "#bg-image-service",
+  ) as HTMLImageElement;
+
+  if (isEdge()) {
+    imageElement.src = "service.webp";
+  } else {
+    imageElement.src = "service.avif";
+  }
+</script>

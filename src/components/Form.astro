@@ -1,0 +1,687 @@
+---
+
+<div class="container-form">
+  <form
+    id="form"
+    class="min-h-0 sm:min-h-0 md:min-h-80 lg:min-h-80 xl:min-h-80 2xl:min-h-80"
+  >
+    <div id="form__inputs">
+      <div class="tab__content mod--contact">
+        <div
+          id="w-node-key"
+          class="w-layout-layout stack mod--contact-form wf-layout-layout"
+        >
+          <div class="field w-layout-cell">
+            <div class="input-wrap">
+              <label
+                class="form__label absolute activeFocusLabel"
+                for="from_name"
+                >Nombre
+                <span class="text-color-red">*</span>
+              </label>
+              <input
+                type="text"
+                name="from_name"
+                id="from_name"
+                class="input w-input activeFocusInput"
+              />
+            </div>
+          </div>
+          <div class="field w-layout-cell">
+            <div class="input-wrap">
+              <label
+                class="form__label absolute activeFocusLabel"
+                for="user_email"
+                id="email_label"
+                >Correo electrónico
+                <span class="text-color-red">*</span>
+              </label>
+              <input
+                type="email"
+                name="user_email"
+                id="user_email"
+                class="input w-input activeFocusInput"
+              />
+              <div class="form__label-invalid anim">
+                Por favor, proporcione un correo válido
+              </div>
+            </div>
+          </div>
+          <div class="field w-layout-cell">
+            <div class="input-wrap">
+              <label
+                class="form__label absolute activeFocusLabel"
+                for="reply_to"
+                >Télefono
+                <span class="text-color-red">*</span>
+              </label>
+              <input
+                type="text"
+                name="telephone"
+                id="telephone"
+                class="input w-input activeFocusInput"
+              />
+            </div>
+          </div>
+          <div class="field w-layout-cell">
+            <div class="input input-wrap" style="z-index:100;">
+              <div
+                class="form-dropdown_toggle w-dropdown-toggle w-dropdown h-full"
+              >
+                <div
+                  class="flex justify-between items-center w-toggle-arrow"
+                  style="height: 100%;"
+                >
+                  <label
+                    id="service_type_label"
+                    class="form-dropdown__toggle-title text-start g-12"
+                    for="service_type"
+                  >
+                    Tipo de servicio
+                  </label>
+                  <img
+                    id="img-arrow"
+                    class="form-dropdown__toggle-arrow"
+                    style="right: 0; position: absolute; z-index: -1;"
+                    src="/arrow.png"
+                    alt=""
+                  />
+                </div>
+                <select name="service_type" id="service_type" class="hidden">
+                  <option value="metal_cutting">Cortes de metal</option>
+                  <option value="plastic_injection"
+                    >Inyección de plástico</option
+                  >
+                  <option value="metal_casting">Fundición de metales</option>
+                  <option value="metal_painting">Pintado de metales</option>
+                  <option value="product_development"
+                    >Desarrollo de productos</option
+                  >
+                  <option value="parts_assembly">Unión de piezas</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Campo para ingresar texto -->
+          <div id="proyect_form" class="field w-layout-cell">
+            <div class="input-wrap is-textarea-contacts">
+              <label class="form__label absolute activeFocusLabel" for="message"
+                >Acerca de tu proyecto
+                <span class="text-color-red">*</span>
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder=""
+                class="input w-input activeFocusInput w-full"
+                style="height: 8rem; padding-top: 1rem;"
+                rows="4"
+                cols="50"></textarea>
+              <!-- <input
+                type="text"
+                id="message"
+                name="message"
+                placeholder=""
+                class="input w-input activeFocusInput w-full"
+                style="border-bottom: 0; height: 8rem;"
+              /> -->
+              <!-- Campo para subir archivos -->
+              <label
+                for="archivo"
+                class="custom-file-upload input w-input size-full justify-end"
+                style="height: 2rem; border-bottom: 0; margin-top: -2rem"
+              >
+                <img src="/icon-attachment.png" alt="Icono de archivo" />
+              </label>
+              <input
+                type="file"
+                id="archivo"
+                name="archivo"
+                accept="*/*"
+                class=""
+                style="display: none;"
+              />
+              <p id="wordCount" class="count-text g-12">0 / 350 caracteres</p>
+            </div>
+          </div>
+        </div>
+        <div class="input-wrap mod--contact-submit-step1">
+          <div class="policy-privacy text-left">
+            <span
+              >Al enviar este formulario confirmo que he leído y acepto la <a
+                href="/"
+                class="link-color">Política de Privacidad</a
+              >
+            </span>
+          </div>
+          <div class="form-submit-wrap">
+            <a
+              href="#"
+              id="button"
+              class="button"
+              onclick="document.getElementById('form').submit();"
+              >Enviar un mensaje
+              <div class="button__icons is-white">
+                <div class="icon-small w-embed">
+                  <svg
+                    aria-hidden="true"
+                    role="img"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    width="100%"
+                    height="100%"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M3.5 8a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-4a1 1 0 0 1-1-1Z"
+                      clip-rule="evenodd"></path>
+                    <path
+                      fill-rule="evenodd"
+                      d="M14.216 6.693a1.494 1.494 0 0 1 0 2.615L3.664 15.222a1.5 1.5 0 0 1-2.148-1.823L3.447 8l-1.93-5.398A1.5 1.5 0 0 1 3.662.779l10.553 5.914ZM12.458 8 3.845 3.173l1.545 4.32c.119.328.119.687 0 1.015l-1.545 4.32L12.457 8Z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="form__sucess"></div>
+  </form>
+</div>
+
+<style>
+  :root {
+    --blue: #3719ca;
+    --white: #fff;
+    --blue-dark: #02021e;
+  }
+
+  @view-transition {
+    navigation: auto; /* ¡Habilitado! */
+  }
+
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .select-visible {
+    display: block;
+  }
+
+  .link-color {
+    color: var(--blue);
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input {
+    width: 100%;
+  }
+  input[type="file"] {
+    color: transparent;
+  }
+  input[type="file"]::after {
+    content: "Selecciona tu archivo";
+  }
+
+  .field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  input[type="submit"] {
+    display: block;
+    padding: 6px 30px;
+    font-size: 14px;
+    background-color: #4460aa;
+    color: #fff;
+    border: none;
+  }
+
+  .text-color-red {
+    color: rgb(214, 18, 18);
+  }
+  .custom-file-upload {
+    display: flex;
+    cursor: pointer;
+  }
+  .custom-file-upload img {
+    /* Estilos para tu imagen, por ejemplo: */
+    width: 26px; /* Ancho de la imagen */
+    height: 26px; /* Alto de la imagen */
+  }
+  .tab__content.mod--contact {
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25.1rem;
+    display: flex;
+  }
+
+  .container-form {
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+  }
+
+  .input-wrap {
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    transform: translate(0);
+  }
+
+  .w-input::placeholder,
+  .w-select::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  .input-wrap.mod--contact-submit-step1 {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  .form-sumit-wrap {
+    flex: none;
+    transition: all 0.4s;
+    position: relative;
+    transform: translate(0);
+  }
+
+  .no-action {
+    pointer-events: none; /* Previene la interacción */
+  }
+
+  .input {
+    color: var(--blue-dark);
+    background-color: transparent;
+    border: 0 solid #32344d;
+    border-bottom: 0.0625rem solid rgba(2, 2, 30, 0.2);
+    border-radius: 0;
+    height: 3.5rem;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 1rem;
+    transition: all 0.2s;
+    position: relative;
+  }
+
+  .input:focus {
+    border-bottom-color: var(--blue);
+    outline: 0;
+  }
+
+  .form-dropdown__toggle {
+    color: #02021e;
+    border-bottom: 1px solid rgba(2, 2, 30, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    padding: 0;
+    transition: all 0.2s;
+    display: flex;
+  }
+
+  .form-dropdown__toggle-arrow {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    display: inline-block;
+    transform: rotate(0);
+  }
+
+  /* Estilos para el grid del formulario */
+
+  .stack.mod--contact-form {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  .stack {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    padding: 0;
+  }
+  .w-layout-layout {
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-auto-columns: 1fr;
+    justify-content: center;
+  }
+  .wf-layout-layout {
+    display: grid;
+  }
+
+  .count-text {
+    width: fit-content;
+    font-size: 0.835rem;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .policy-privacy {
+    color: rgba(2, 2, 30, 0.7);
+    max-width: 17rem;
+    font-size: 0.835rem;
+    color: rgba(2, 2, 30, 0.7);
+    max-width: 17rem;
+    font-size: 0.875rem;
+  }
+  .button {
+    z-index: 2;
+    grid-column-gap: 0.75rem;
+    background-color: var(--blue);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 99px;
+    justify-content: center;
+    align-items: center;
+    padding: 1.1rem 0.75rem 1.1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.4;
+    transition: all 0.4s;
+    display: flex;
+    position: relative;
+    transform: translate(0);
+  }
+  .icon-small {
+    z-index: 2;
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0;
+    position: relative;
+  }
+
+  .w-layout-cell {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .input-wrap.mod--contact-submit-step1 {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+  .input-wrap {
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    transform: translate(0);
+  }
+  .stack.mod--contact-form {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+  .stack {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    padding: 0;
+  }
+  .wf-layout-layout {
+    display: grid;
+  }
+  .button__icons.is-white {
+    border-color: var(--white);
+    background-color: var(--white);
+    color: var(--blue);
+    position: relative;
+  }
+
+  .button__icons {
+    color: #fff;
+    background-color: #3827c7;
+    border: 0.125rem solid #3827c7;
+    border-radius: 50%;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    transition: all 0.4s;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transform: translate(0);
+  }
+
+  .input-wrap {
+    position: relative;
+  }
+
+  .select-visible {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    z-index: 1000;
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  .form__label.active {
+    font-size: 0.875rem;
+    transform: translateY(-0.2rem);
+  }
+  .form__label,
+  .form__label-invalid {
+    pointer-events: none;
+  }
+  .form__label {
+    z-index: 2;
+    color: rgba(2, 2, 30, 0.5) !important;
+    font-size: 1rem;
+    margin-bottom: 0;
+    margin-left: -0.25rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    font-weight: 400;
+    line-height: 1;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    /* position: absolute; */
+    top: 0;
+    left: 0%;
+    right: auto;
+    transform: translateY(1.4rem);
+  }
+
+  .form__label-invalid.anim {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+
+  .form__attach {
+    grid-column-gap: 0.75rem;
+    grid-row-gap: 0.75rem;
+    pointer-events: none;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+  }
+  .w--open #img-arrow {
+    transform: rotate(-180deg);
+    transition: transform 200ms ease;
+  }
+
+  div.w--open {
+    border-bottom: 1px solid #3827c7;
+  }
+
+  .all-size {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1000;
+  }
+
+  #proyect_form {
+    grid-column: span 2 / span 2;
+  }
+  #w-node-key {
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 1fr;
+  }
+  .stack.mod--contact-form {
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .g-12 {
+    color: rgba(2, 2, 30, 0.5);
+  }
+  .selected-option {
+    color: black !important;
+  }
+</style>
+
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+<script type="text/javascript">
+  (function () {
+    emailjs.init("SsrXxV23cwZnkbb0C");
+  })();
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.getElementById("button");
+
+    btn.addEventListener("click", function (event) {
+      event.preventDefault(); // Previene la acción por defecto del ancla
+
+      btn.textContent = "Sending..."; // Cambia 'value' por 'textContent'
+
+      const form = document.getElementById("form");
+      const serviceID = "default_service";
+      const templateID = "template_b4pxi59";
+
+      emailjs.sendForm(serviceID, templateID, form).then(
+        () => {
+          btn.textContent = "Send Email"; // Cambia 'value' por 'textContent'
+          alert("Sent!");
+        },
+        (err) => {
+          btn.textContent = "Send Email"; // Cambia 'value' por 'textContent'
+          alert(JSON.stringify(err));
+        },
+      );
+    });
+
+    window.onload = function () {
+      document.getElementById("form").reset();
+    };
+
+    // Este código asume que tienes un elemento en tu HTML para mostrar el nombre del archivo
+    // Por ejemplo, un span con id="nombreArchivo"
+    document.getElementById("archivo").onchange = function (e) {
+      // Obtiene el nombre del archivo seleccionado
+      var fileName = e.target.files[0].name;
+      // Actualiza el contenido del elemento con el nuevo nombre de archivo
+      document.getElementById("nombreArchivo").textContent =
+        fileName || "Selecciona tu archivo";
+    };
+
+    // Agregar la clase “active” al label del formulario cuando el campo de correo esté activo, puedes usar JavaScript para detectar el enfoque (focus) y desenfoque (blur) del campo de entrada.
+    const focusElements = document.querySelectorAll(
+      ".activeFocusInput, .activeFocusAnchor",
+    );
+    const formLabels = document.querySelectorAll(".activeFocusLabel");
+
+    // Asegurarse de que hay la misma cantidad de elementos y labels
+    if (focusElements.length === formLabels.length) {
+      focusElements.forEach((element, index) => {
+        const label = formLabels[index];
+
+        element.addEventListener("focus", () => {
+          label.classList.add("active");
+        });
+
+        element.addEventListener("blur", () => {
+          if (!element.value) {
+            label.classList.remove("active");
+          }
+        });
+      });
+    } else {
+      console.error("El número de elementos y labels no coincide.");
+    }
+
+    const toggleArrows = document.querySelectorAll(
+      ".form-dropdown__toggle-arrow, .w-toggle-arrow",
+    );
+
+    const selectElement = document.getElementById("service_type");
+    const labelElement = document.getElementById("service_type_label");
+
+    toggleArrows.forEach((toggleArrow) => {
+      toggleArrow.addEventListener("click", function () {
+        selectElement.classList.toggle("hidden");
+        selectElement.classList.toggle("select-visible");
+        selectElement.size = selectElement.classList.contains("select-visible")
+          ? selectElement.options.length
+          : 1;
+
+        // Añadir o quitar la clase "w--open" para el icono de desplazamiento
+        toggleArrow.classList.toggle("w--open");
+      });
+    });
+
+    // Asegurarse de que se puede seleccionar una opción
+    selectElement.addEventListener("change", function () {
+      // Actualizar el texto del label con la opción seleccionada
+      const selectedOptionText =
+        selectElement.options[selectElement.selectedIndex].text;
+      labelElement.innerHTML = `${selectedOptionText}`;
+
+      // Añadir clase para cambiar el color del texto a negro
+      labelElement.classList.add("selected-option");
+
+      // Ocultar el select después de seleccionar una opción
+      selectElement.classList.add("hidden");
+      selectElement.classList.remove("select-visible");
+      selectElement.size = 1; // Vuelve al tamaño normal después de seleccionar
+
+      // Asegurarse de que el icono de desplazamiento vuelve a su estado original
+      toggleArrows.forEach((toggleArrow) => {
+        toggleArrow.classList.remove("w--open");
+      });
+    });
+  });
+
+  document.getElementById("message").addEventListener("input", function () {
+    const maxChars = 350;
+    const textArea = this;
+    const charCount = document.getElementById("wordCount");
+
+    if (textArea.value.length > maxChars) {
+      textArea.value = textArea.value.substring(0, maxChars);
+    }
+
+    charCount.textContent = `${textArea.value.length} / ${maxChars} caracteres`;
+  });
+</script>

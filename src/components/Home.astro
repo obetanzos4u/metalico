@@ -1,0 +1,28 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section
+  title="Maquila metalmecánica e inyección de plástico"
+  subtitle="Consolidamos proyectos con tecnología metalúrgica"
+  color="white"
+  id="home"
+>
+  <div slot="footer">
+    <a
+      class="bg-white text-sm rounded font-medium px-12 py-2 transition-colors hover:bg-black hover:text-white inline-flex justify-center items-center text-black"
+      href="#contact"
+      aria-label="Cotizar servicio - Ir al formulario de contacto"
+      title="Cotiza tu servicio con nosotros"
+    >
+      Cotizar servicio</a
+    >
+  </div>
+
+  <img
+    slot="background"
+    class="object-center object-cover h-full w-full"
+    alt=""
+    src="home.avif"
+  />
+</Section>

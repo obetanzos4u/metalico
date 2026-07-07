@@ -1,0 +1,214 @@
+---
+
+---
+
+<div class="custom-info-contact text-white">
+  <h1 class="heading-1">
+    <span>Vamos a</span>
+    <br />
+    <span>conversar</span>
+  </h1>
+  <div>
+    <div class="contact__list-wrap">
+      <ul class="list mod--contact">
+        <li class="list__item mod--contact">
+          <div>Te responderemos en menos de 24 horas</div>
+        </li>
+        <li class="list__item mod--contact">
+          <div>Firmaremos un acuerdo de privacidad si así lo requieres</div>
+        </li>
+        <li class="list__item mod--contact">
+          <div>Acceso a especialistas en producción</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="columns mod--contact-video">
+    <section class="columns__col mod--contact-video">
+      <div>Video</div>
+    </section>
+    <section class="columns__col mod--contact-video">
+      <div class="contact__video-address">
+        <span class="contact-title">Contacto directo:</span>
+        <span class="contact-mail">contactanos@metallico.com</span>
+      </div>
+      <div>
+        <button class="book_call">
+          Agenda una llamada
+          <div class="button__icons bg-color-yellow">
+            <div class="icon-small w-embed">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100%"
+                height="100%"
+                fill="none"
+                stroke="CurrentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M2 3.997c0-.736.597-1.333 1.333-1.333h9.334c.736 0 1.333.597 1.333 1.333v9.334c0 .736-.597 1.333-1.333 1.333H3.333A1.333 1.333 0 0 1 2 13.331V3.997Z"
+                  clip-rule="evenodd"></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M10.664 1.336v2.667M5.336 1.336v2.667M2 6.664h12"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </section>
+  </div>
+</div>
+
+<style>
+  :root {
+    --blue-dark: #02021e;
+    --yellow: #fdc448;
+  }
+  .custom-info-contact {
+    display: flex;
+    width: fit-content;
+    grid-column-gap: 2.75rem;
+    grid-row-gap: 2.75rem;
+    opacity: 1;
+    flex-direction: column;
+    flex: 0 auto;
+    justify-content: flex-start;
+    padding-top: 2rem;
+    justify-content: space-between;
+    transition: opacity 0.4s;
+  }
+
+  .heading-1 {
+    width: fit-content;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    font-size: 5rem;
+    text-align: left;
+    font-weight: 500;
+    line-height: 0.9;
+  }
+
+  .contact__list-wrap {
+    grid-column-gap: 4.75rem;
+    grid-row-gap: 4.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+  }
+  .icon-small {
+    z-index: 2;
+    flex: none;
+    width: 1rem;
+    height: 1rem;
+    font-size: 0;
+    position: relative;
+  }
+
+  .list__item {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+  .contact-title {
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .book_call {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 99px;
+    padding: 0.5rem 0.75rem 0.5rem 1.25rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .list__item.mod--contact {
+    opacity: 1;
+    background-image: url("/public/vista-superior-tornillo.png");
+    background-position: 0%;
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    text-align: initial;
+    margin-bottom: 0;
+    padding-left: 2rem;
+    list-style-type: none;
+    transition:
+      transform 0.6s,
+      opacity 0.4s;
+    position: relative;
+    transform: translate(0);
+  }
+  .columns {
+    justify-content: space-between;
+    align-items: stretch;
+    display: flex;
+  }
+
+  .list.mod--contact {
+    grid-column-gap: 0.875rem;
+    grid-row-gap: 0.875rem;
+    flex-direction: column;
+    padding-left: 0;
+    display: flex;
+  }
+  .contact-mail {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: initial;
+  }
+  .columns.mod--contact-video {
+    grid-column-gap: 1.5rem;
+    opacity: 1;
+    justify-content: flex-start;
+    align-items: center;
+    transition:
+      transform 0.6s,
+      opacity 0.4s;
+    transform: translate(0);
+  }
+  .columns__col.mod--contact-video {
+    grid-row-gap: 1.25rem;
+    flex-direction: column;
+    flex: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+  }
+  .contact__video-address {
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    flex-flow: column;
+    align-items: flex-start;
+    display: flex;
+  }
+  .button__icons.bg-color-yellow {
+    border-color: var(--yellow);
+    background-color: var(--yellow);
+    color: var(--blue-dark);
+  }
+  .button__icons {
+    border-radius: 50%;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
+    width: 2rem;
+    height: 2rem;
+    transition: all 0.4s;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    transform: translate(0);
+  }
+</style>

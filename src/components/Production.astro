@@ -1,0 +1,84 @@
+---
+import Section from "./Section.astro";
+import "../styles/nft.css";
+---
+
+<Section
+  title="Producción"
+  subtitle="Unimos experiencia técnica con equipo alta eficiencia"
+  color="black"
+  id="production"
+>
+  <div slot="footer" class="gap-x-6 flex mx-auto">
+    <a
+      class="border-[3px] border-gray-800 bg-gray-800 text-sm rounded font-medium text-white px-16 py-2 inline-block transition-colors hover:border-gray-500 hover:bg-gray-500"
+      href="#"
+    >
+      Lista de procesos</a
+    >
+    <!-- <a
+      class="bg-white text-sm rounded font-medium px-12 py-2 transition-colors hover:bg-black hover:text-white inline-flex justify-center items-center text-black"
+      href="#"
+    >
+      Saber más</a
+    > -->
+  </div>
+  <div slot="contain">
+    <div class="nft">
+      <div class="main">
+        <div class="tokenInfo">
+          <div class="duration">
+            <p>
+              Capacidad de Producción: Con una capacidad de producción anual de
+              más de 500,000 toneladas, somos capaces de manejar proyectos de
+              cualquier escala, desde piezas individuales hasta series completas
+              de producción masiva. Nuestros procesos automatizados y
+              optimizados garantizan la entrega puntual y la calidad superior en
+              cada pedido.
+              <br /><br />
+              Tecnología de Punta: Utilizamos la última tecnología en fundición y
+              forja, incluyendo hornos de inducción de alta eficiencia y prensas
+              de forja controladas por computadora, que nos permiten trabajar con
+              una amplia gama de metales y aleaciones con precisión milimétrica.
+              <br /><br />
+              Compromiso con la Calidad: La calidad es nuestra prioridad. Estamos
+              certificados bajo las normas ISO 9001 y nos comprometemos a mantener
+              los más altos estándares en cada fase del proceso productivo, desde
+              la selección de materia prima hasta el producto final.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img
+    slot="background"
+    alt="Domo con estructura de acera con recubrimiento"
+    class="h-full w-full object-cover object-center"
+    src="production.avif"
+    id="bg-image-production"
+  />
+</Section>
+
+<script>
+  function isEdge() {
+    if (
+      navigator.userAgent.indexOf("Edge") > -1 ||
+      navigator.userAgent.indexOf("Edg") > -1
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let imageElement = document.querySelector(
+    "#bg-image-production",
+  ) as HTMLImageElement;
+
+  if (isEdge()) {
+    imageElement.src = "production.webp";
+  } else {
+    imageElement.src = "production.avif";
+  }
+</script>

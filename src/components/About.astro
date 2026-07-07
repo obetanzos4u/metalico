@@ -1,0 +1,79 @@
+---
+import Section from "./Section.astro";
+import "../styles/nft.css";
+---
+
+<Section
+  title="¿Quienes somos?"
+  subtitle="Desarrollamos piezas metálicas para diferentes aplicaciones"
+  color="black"
+  id="about"
+>
+  <div slot="footer" class="gap-x-6 flex mx-auto">
+    <a
+      class="border-[3px] border-gray-600 bg-gray-600 text-sm rounded font-medium text-white px-12 py-2 inline-block transition-colors hover:border-gray-500 hover:bg-gray-500"
+      href="#"
+    >
+      Catálogo de servicios</a
+    >
+    <!-- <a
+        class="border-[3px] border-white bg-white/5 backdrop-blur-sm text-sm rounded font-medium text-white px-12 py-2 inline-block hover:bg-white hover:text-black transition-colors"
+        href="#"
+      >
+        Pedido personalizado</a
+      > -->
+    <a
+      class="bg-white text-sm rounded font-medium px-12 py-2 transition-colors hover:bg-black hover:text-white inline-flex justify-center items-center text-black"
+      href="#"
+    >
+      Pedido personalizado</a
+    >
+  </div>
+  <div slot="contain">
+    <div class="nft">
+      <div class="main">
+        <div class="tokenInfo">
+          <div class="duration">
+            <p>
+              METALICO cuenta con equipos avanzados como cortadoras láser,
+              fresadoras, y máquinas de inyección plástica. Ofrece servicios de
+              diseño, ingeniería, fabricación de moldes y troqueles, y proyectos
+              especiales. Tenemos acabados metalicos e inyección de plástico.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <img
+    slot="background"
+    alt="Fondo metalico"
+    class="h-full w-full object-cover object-center bg-image"
+    src="about.webp"
+    id="bg-image-about"
+  />
+</Section>
+
+<script>
+  function isEdge() {
+    if (
+      navigator.userAgent.indexOf("Edge") > -1 ||
+      navigator.userAgent.indexOf("Edg") > -1
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  let imageElement = document.querySelector(
+    "#bg-image-about",
+  ) as HTMLImageElement;
+
+  if (isEdge()) {
+    imageElement.src = "about.webp";
+  } else {
+    imageElement.src = "about.avif";
+  }
+</script>
