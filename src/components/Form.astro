@@ -574,19 +574,19 @@
     btn.addEventListener("click", function (event) {
       event.preventDefault(); // Previene la acción por defecto del ancla
 
-      btn.textContent = "Sending..."; // Cambia 'value' por 'textContent'
+      btn.textContent = "Enviando...";
 
       const form = document.getElementById("form");
-      const serviceID = "default_service";
+      const serviceID = "service_t2idvpt";
       const templateID = "template_b4pxi59";
 
       emailjs.sendForm(serviceID, templateID, form).then(
         () => {
-          btn.textContent = "Send Email"; // Cambia 'value' por 'textContent'
-          alert("Sent!");
+          btn.textContent = "Enviar mensaje";
+          alert("Mensaje enviado con éxito");
         },
         (err) => {
-          btn.textContent = "Send Email"; // Cambia 'value' por 'textContent'
+          btn.textContent = "Enviar mensaje";
           alert(JSON.stringify(err));
         },
       );
