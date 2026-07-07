@@ -31,6 +31,12 @@
       <div class="contact__video-address">
         <span class="contact-title">Contacto directo:</span>
         <span class="contact-mail">contacto@metalico.mx</span>
+        <span class="contact-phone">
+          <a href="tel:+525581082193" class="contact-link">Tel: 55 8108 2193</a>
+        </span>
+        <span class="contact-phone">
+          <a href="https://wa.me/525581082193" target="_blank" rel="noopener noreferrer" class="contact-link">WhatsApp: 55 8108 2193</a>
+        </span>
       </div>
       <div>
         <button class="book_call">
@@ -166,6 +172,18 @@
     font-size: 1.25rem;
     font-weight: bold;
     text-align: initial;
+  }
+  .contact-phone {
+    font-size: 1rem;
+    text-align: initial;
+  }
+  .contact-link {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .contact-link:hover {
+    opacity: 0.7;
   }
   .columns.mod--contact-video {
     grid-column-gap: 1.5rem;
