@@ -14,7 +14,7 @@ import FooterMenu from "./FooterMenu.astro";
 >
   <div class="z-30 relative h-full flex flex-col">
     <header>
-      <h2 class={`${textColor} pt-40 text-[40px] font-medium`}>
+        <h2 class={`${textColor} pt-28 text-[40px] font-medium`}>
         {title}
       </h2>
       <p class={`${textColor} text-sm ${subtitleExtraClass}`}>
@@ -24,7 +24,7 @@ import FooterMenu from "./FooterMenu.astro";
 
     <!-- Sección 'contain' agregada aquí -->
     <div
-      class="max-w-[40%] mx-auto my-12 text-center flex justify-center text-base p-8"
+      class="max-w-[40%] mx-auto my-10 text-center flex justify-center text-base p-8"
     >
       <div
         class="relative
@@ -38,7 +38,7 @@ import FooterMenu from "./FooterMenu.astro";
       </div>
     </div>
 
-    <footer class="flex flex-col justify-end pb-10 mt-auto">
+    <footer class="flex flex-col flex-grow justify-end pb-8">
       <slot name="footer" />
       <!-- Contidionally load footer: -->
       {showFooterContent && <FooterMenu />}
