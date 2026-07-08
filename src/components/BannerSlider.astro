@@ -63,10 +63,7 @@ const slides = [
 
   function goTo(index: number) {
     slides.forEach((s, i) => {
-      const img = s.querySelector("img");
-      if (img) {
-        img.style.opacity = i === index ? "1" : "0";
-      }
+      (s as HTMLElement).style.opacity = i === index ? "1" : "0";
     });
     dots.forEach((d, i) => {
       if (i === index) {
