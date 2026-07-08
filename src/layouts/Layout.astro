@@ -67,4 +67,25 @@ const { title, description = "Metalico - Maquila metalmecánica e inyección de 
     font-weight: 700;
     font-style: normal;
   }
+  .bg-fade {
+    opacity: 0;
+    transition: opacity 0.7s;
+  }
+  .bg-fade.loaded {
+    opacity: 1;
+  }
 </style>
+
+<script>
+  const bgImages = document.querySelectorAll(".bg-fade");
+  let remaining = bgImages.length;
+  function fadeIn() {
+    bgImages.forEach((img) => img.classList.add("loaded"));
+  }
+  bgImages.forEach((img) => {
+    const onDone = () => { remaining--; if (remaining <= 0) fadeIn(); };
+    if (img.complete) onDone();
+    else { img.addEventListener("load", onDone); img.addEventListener("error", onDone); }
+  });
+  setTimeout(fadeIn, 3000);
+</script>
