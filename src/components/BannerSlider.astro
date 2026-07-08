@@ -1,0 +1,104 @@
+---
+const slides = [
+  { image: "home.avif", alt: "Maquila metalmecánica" },
+  { image: "service.avif", alt: "Servicios industriales" },
+  { image: "production.avif", alt: "Producción metalúrgica" },
+  { image: "about.webp", alt: "Instalaciones Metalico" },
+];
+---
+
+<section class="landing-section relative h-screen w-screen overflow-hidden bg-black" data-header-color="white">
+  {slides.map((slide, i) => (
+    <div
+      class="slide absolute inset-0 h-full w-full transition-opacity duration-700"
+      data-index={i}
+    >
+      <img
+        class="h-full w-full object-cover object-center"
+        src={slide.image}
+        alt={slide.alt}
+      />
+    </div>
+  ))}
+
+  <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>
+
+  <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-white px-4">
+    <img
+      class="h-24 md:h-32 mb-6"
+      src="/logo_metalico.png"
+      alt="Metalico"
+    />
+    <h1 class="text-3xl md:text-5xl font-bold text-center max-w-3xl">
+      Maquila metalmecánica e inyección de plástico
+    </h1>
+    <p class="text-lg md:text-xl mt-4 text-center max-w-xl text-gray-200">
+      Consolidamos proyectos con tecnología metalúrgica de vanguardia
+    </p>
+    <a
+      href="#contact"
+      class="mt-10 bg-yellow-400 text-black font-semibold px-10 py-3 rounded text-lg transition-colors hover:bg-yellow-300"
+    >
+      Cotizar servicio
+    </a>
+  </div>
+
+  <div class="absolute bottom-10 left-0 right-0 z-20 flex justify-center gap-3">
+    {slides.map((_, i) => (
+      <button
+        class="dot w-3 h-3 rounded-full bg-white/40 transition-all duration-300"
+        data-index={i}
+        aria-label={`Ir al slide ${i + 1}`}
+      ></button>
+    ))}
+  </div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll(".slide") as NodeListOf<HTMLElement>;
+  const dots = document.querySelectorAll(".dot") as NodeListOf<HTMLElement>;
+
+  let current = 0;
+  let interval: ReturnType<typeof setInterval>;
+
+  function goTo(index: number) {
+    slides.forEach((s, i) => {
+      const img = s.querySelector("img");
+      if (img) {
+        img.style.opacity = i === index ? "1" : "0";
+      }
+    });
+    dots.forEach((d, i) => {
+      if (i === index) {
+        d.classList.add("bg-white");
+        d.classList.remove("bg-white/40");
+      } else {
+        d.classList.add("bg-white/40");
+        d.classList.remove("bg-white");
+      }
+    });
+    current = index;
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    interval = setInterval(() => {
+      goTo((current + 1) % slides.length);
+    }, 12000);
+  }
+
+  function stopAutoPlay() {
+    clearInterval(interval);
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      const idx = Number(dot.dataset.index);
+      goTo(idx);
+      startAutoPlay();
+    });
+  });
+
+  goTo(0);
+  startAutoPlay();
+</script>

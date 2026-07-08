@@ -8,6 +8,7 @@ import Products from "../components/Products.astro";
 import About from "../components/About.astro";
 import Production from "../components/Production.astro";
 import Layout from "../layouts/Layout.astro";
+import BannerSlider from "../components/BannerSlider.astro";
 ---
 
 <Layout title="Metalico">
@@ -16,6 +17,9 @@ import Layout from "../layouts/Layout.astro";
   <main
     class="snap-y snap-mandatory relative w-full h-screen overflow-y-auto overflow-x-hidden scroll-smooth"
   >
+    <div class="snap-center">
+      <BannerSlider />
+    </div>
     <div class="snap-center">
       <Home />
     </div>
