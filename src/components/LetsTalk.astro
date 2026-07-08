@@ -20,14 +20,14 @@ import CustomContainer from "./CustomContainer.astro";
 >
   <div class="z-30 relative h-full flex flex-col">
     <header>
-      <h2 class={`${textColor} pt-40 text-[40px] font-medium`}>
+      <h2 class={`${textColor} pt-20 text-[40px] font-medium`}>
         {title}
       </h2>
-      <p class={`${textColor} text-sm ${subtitleExtraClass}`}>
+      <p class={`${textColor} text-sm ${subtitleExtraClass} mb-4`}>
         {subtitle}
       </p>
     </header>
-    <div class="container-contact">
+    <div class="container-contact mt-4">
       <div class="flex flex-row w-[90%] justify-between mx-auto">
         <CustomInfoContain />
         <CustomContainer mostrarFormulario={mostrarFormulario} />
