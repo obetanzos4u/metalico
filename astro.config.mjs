@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from './tailwind-plugin.mjs';
 
 // https://astro.build/config
 export default defineConfig({

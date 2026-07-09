@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@source "../components";
+@source "../layouts";
+@source "../pages";
 
 @theme {
   --font-sans: "Gotham SSm A", sans-serif;
