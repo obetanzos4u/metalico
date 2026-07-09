@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 
 <header
   id="landing-header"
-  class="py-3 px-[5%] flex items-center fixed top-0 w-full justify-between z-40 text-white bg-black/40"
+  class="py-3 px-[5%] flex items-center fixed top-0 w-full justify-between z-40 text-white bg-black"
 >
   <div class="flex flex-grow basis-0">
     <a href="./"><Logo /></a>
@@ -154,8 +154,9 @@ import Logo from "./Logo.astro";
   const headerEl = document.querySelector("#landing-header") as HTMLElement;
 
   const observerOptions = {
-    rootMargin: "-80px 0px -50% 0px",
-    threshold: 0,
+    root: null,
+    rootMargin: "0px", // en cuanto se vea el elemento
+    threshold: 0.9, // porcentaje de visibilidad
   };
 
   const observer = new IntersectionObserver((entries) => {
@@ -164,7 +165,6 @@ import Logo from "./Logo.astro";
       if (isIntersecting) {
         const color = entry.target.getAttribute("data-header-color");
         headerEl.style.color = color;
-        headerEl.style.backgroundColor = color === "white" ? "rgba(0,0,0,0.4)" : "rgba(255,255,255,0.85)";
       }
     });
   }, observerOptions);
